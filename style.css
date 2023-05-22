@@ -169,7 +169,7 @@ footer h2 {
         font-size: 0.9rem;
     }
     .navbar a {
-        font-size: 0.92rem;
+        font-size: 0.45rem;
     }
     .image-name h2 {
         font-size: 0.77rem;
@@ -181,16 +181,13 @@ footer h2 {
         font-size: 0.79rem;
     }
     .navbar {
-        right: 10%;
+        right: 6.2%;
     }
 }
 /* Small Mobile Device */
 @media only screen and (max-width:358px) {
     h1 {
         font-size: 0.87rem;
-    }
-    .navbar a {
-        font-size: 0.45rem;
     }
     .image-name h2 {
         font-size: 0.5rem;
@@ -201,4 +198,5 @@ footer h2 {
     .contact h3 {
         font-size: 0.65rem;
     }
+
 }
