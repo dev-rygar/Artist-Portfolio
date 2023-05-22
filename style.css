@@ -127,6 +127,22 @@ footer h2 {
     text-decoration: none;
 }
 
+@media only screen and (max-width:1300px) {
+    .navbar {
+        right: 5%;
+    }
+}
+@media only screen and (max-width:1000px) {
+    .navbar {
+        right: 6%;
+    }
+}
+@media only screen and (max-width:876px) {
+    .navbar {
+        right: 6%;
+    }
+}
+
 @media only screen and (max-width:716px) {
     h1 {
         font-size: 1.2rem;
@@ -164,14 +180,17 @@ footer h2 {
     .contact h3 {
         font-size: 0.79rem;
     }
+    .navbar {
+        right: 10%;
+    }
 }
-
+/* Small Mobile Device */
 @media only screen and (max-width:358px) {
     h1 {
         font-size: 0.87rem;
     }
     .navbar a {
-        font-size: 0.75rem;
+        font-size: 0.45rem;
     }
     .image-name h2 {
         font-size: 0.5rem;
