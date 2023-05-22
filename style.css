@@ -1,85 +1,185 @@
+
 * {
     /* border: 1px solid red; */
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Cormorant', serif;
-}   
-
-.header h1, nav, li {
-    display: inline-block;
-    margin: 8px;
-    padding: 5px;
 }
 
-.header {
-    /* border: 1px solid blue; */
-    margin: 15px 35px;
+header,
+main,
+footer {
+    margin: 1% 2% 0.5% 2%;
+    padding: 0.5%;
+    width: 95%;
 }
 
-.header h1 {
-    font-weight: 350;
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
 }
 
-.top-nav a {
-    font-size: 20px;
-    color: black;
+.header-title {
+    width: 45%;
+    padding-left: 0.85%;
+}
+
+.navbar {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-self: center;
+    position: relative;
+    right: 3.9%; /* make it 10% for mobile*/
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.navbar a {
     text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight:500;
 }
 
-a.active {
-    color: black;
-    text-decoration: none;
+.active {
     border-bottom: 1px solid black;
 }
 
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar li {
+    padding: 0 5%;
+}
+
 main {
-    margin: 15px 35px;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 1px solid slateblue; */
+    padding: 0;
 }
 
-.img-container {
-    width: 49.75%;
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 20px 12px;  
+.card {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    padding: 5px;
+    margin-bottom: 0.5%;
 }
 
-.img-container img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-
-}
-
-.img-container h2 {
-    display: inline-block;
-}
-
-#about {
-    margin: 70px 35px;
-}
-
-#about div {
+.image-container {
     position: relative;
-    left: 150px;
-    top: 20px;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625 or 56.25%) */
 }
 
-#about h2 {
-    font-size: 30px;
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-name h2 {
+    font-size: 1.1rem;
+}
+
+.about,
+.contact {
+    padding-top: 3.5%;
+    padding-left: 10%;
+}
+
+footer h2 {
+    font-size: 2rem;
     font-weight: 350;
-    margin-top: 20px;
 }
 
-#contact {
-    margin: 70px 35px;
+.contact h2 {
+    font-size: 2.5rem;
+    padding-bottom: 5%;
 }
 
-#contact h3 {
-    position:relative;
-    left: 150px;
-    top: 30px;
+.contact a {
+    color: black;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:716px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    .navbar a {
+        font-size: 1rem;
+    }
+    .image-name h2 {
+        font-size: 0.85rem;
+    }
+    .about h2 {
+        font-size: 1.3rem;
+    }
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+    .contact h3 {
+        font-size: 0.95rem;
+    }
+}
+
+@media only screen and (max-width:478px) {
+    h1 {
+        font-size: 0.9rem;
+    }
+    .navbar a {
+        font-size: 0.92rem;
+    }
+    .image-name h2 {
+        font-size: 0.77rem;
+    }
+    .about h2, .contact h2 {
+        font-size: 1.05rem;
+    }
+    .contact h3 {
+        font-size: 0.79rem;
+    }
+}
+
+@media only screen and (max-width:358px) {
+    h1 {
+        font-size: 0.87rem;
+    }
+    .navbar a {
+        font-size: 0.75rem;
+    }
+    .image-name h2 {
+        font-size: 0.5rem;
+    }
+    .about h2, .contact h2 {
+        font-size: 0.77rem;
+    }
+    .contact h3 {
+        font-size: 0.65rem;
+    }
 }
